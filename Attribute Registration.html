@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Attribute Ranges Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        select, input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .buttons {
+            grid-column: span 2;
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button.save {
+            background-color: #28a745;
+            color: #fff;
+        }
+        button.clear {
+            background-color: #dc3545;
+            color: #fff;
+        }
+        .end a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Test Attribute Ranges Registration</h1>
+    <form id="attributeForm">
+        <div>
+            <label for="section">Section</label>
+            <select id="section" name="section">
+                <option value="">Select</option>
+                <option value="">Select</option>
+                <option value="">Select</option>
+                <option value="">Select</option>
+            </select>
+        </div>
+        <div>
+            <label for="method">Method Name</label>
+            <select id="method" name="method">
+                <option value="">Select</option>
+                <option value="">Select</option>
+                <option value="">Select</option>
+                <option value="">Select</option>
+            </select>
+        </div>
+        <div>
+            <label for="testGroup">Test Group</label>
+            <select id="testGroup" name="testGroup">
+                <option value="">Select</option>
+            </select>
+        </div>
+        <div>
+            <label for="gender">Gender</label>
+            <input type="text" id="gender" name="gender"  readonly>
+        </div>
+        <div>
+            <label for="test">Test</label>
+            <select id="test" name="test">
+                <option value="">Select</option>
+                <option value="">Select</option>
+                <option value="">Select</option>
+                <option value="">Select</option>
+            </select>
+        </div>
+        <div>
+            <label for="ageType">Age Type</label>
+            <input type="text" id="ageType" name="ageType" value="Year(s)" readonly>
+        </div>
+        <div>
+            <label for="testAttribute">Test Attribute</label>
+            <select id="testAttribute" name="testAttribute">
+                <option value="">Select</option>
+                <option value="">Select</option>
+                <option value="">Select</option>
+                <option value="">Select</option>
+            </select>
+        </div>
+        <div>
+            <label for="minAge">Min Age</label>
+            <input type="number" id="minAge" name="minAge" value="0">
+        </div>
+        <div>
+            <label for="minValue">Min Value</label>
+            <input type="number" id="minValue" name="minValue">
+        </div>
+        <div>
+            <label for="maxAge">Max Age</label>
+            <input type="number" id="maxAge" name="maxAge" value="0">
+        </div>
+        <div>
+            <label for="maxValue">Max Value</label>
+            <input type="number" id="maxValue" name="maxValue">
+        </div>
+        <div>
+            <label for="minPvalue">Min Pvalue</label>
+            <input type="number" id="minPvalue" name="minPvalue">
+        </div>
+        <div>
+            <label for="maxPvalue">Max Pvalue</label>
+            <input type="number" id="maxPvalue" name="maxPvalue">
+        </div>
+        <div>
+            <label for="unit">Unit</label>
+            <input type="text" id="unit" name="unit">
+        </div>
+        <div>
+            <label for="parameterRanges">Enter Parameter Ranges</label>
+            <input type="text" id="parameterRanges" name="parameterRanges">
+        </div>
+        <div class="buttons">
+            <button type="button" class="save" onclick="saveForm()">Save</button>
+            <button type="button" class="clear" onclick="clearForm()">Clear</button>
+        </div>
+    </form>
+    <div class="end">
+        <p>&copy; 2024, made with by <span class="highlight"><a href="Index LIMS.html"><b>Techmedology</b></a></span></p>
+    </div>
+</div>
+
+<script>
+    function saveForm() {
+        const form = document.getElementById('attributeForm');
+        const formData = new FormData(form);
+        const data = {};
+        formData.forEach((value, key) => {
+            data[key] = value;
+        });
+        console.log('Form data:', data);
+        // Add your form submission logic here
+    }
+
+    function clearForm() {
+        document.getElementById('attributeForm').reset();
+    }
+</script>
+
+</body>
+</html>

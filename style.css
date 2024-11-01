@@ -1,0 +1,206 @@
+body {
+    margin: 0;
+    background-color: #ece8e8;
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+}
+.main {
+    padding: 20px 0 0 30px;
+}
+.sidebar {
+    width: 250px;
+    height: 600px;
+    border-radius: 20px 0;
+    background-color: #2C2F33;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sidebar-content {
+    width: 100%;
+}
+.sidebar h2 {
+    text-align: center;
+    padding: 20px 0;
+    margin: 0;
+    border-radius: 20px 0;
+    background-color: #23272A;
+    width: 100%;
+}
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.sidebar ul li {
+    padding: 15px 20px;
+    border-bottom: 1px solid #23272A;
+    display: flex;
+    align-items: center;
+}
+.sidebar ul li i {
+    margin-right: 10px;
+}
+.sidebar ul li:hover {
+    background-color: #42464D;
+    cursor: pointer;
+}
+.attri a {
+    text-decoration: none;
+    color: white;
+}
+.main-content {
+    flex: 1;
+    padding: 20px;
+    position: relative;
+}
+.header a {
+    text-decoration: none;
+}
+.header a:hover {
+    color: red;
+}
+.header .highlight {
+    color: #007BFF;
+}
+.settings-icon {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+.configurator {
+    width: 300px;
+    background-color: #fff;
+    position: fixed;
+    right: -300px;
+    top: 0;
+    height: 100%;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s;
+}
+.configurator.open {
+    right: 0;
+}
+.config-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+}
+.config-header h2 {
+    margin: 0;
+    font-size: 18px;
+}
+.config-header span {
+    font-size: 24px;
+    cursor: pointer;
+}
+.config-body {
+    padding: 20px;
+}
+.colors {
+    display: flex;
+    gap: 10px;
+}
+.color {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.colors .color:nth-child(1) { background-color: #FF4757; }
+.colors .color:nth-child(2) { background-color: #2C2F33; }
+.colors .color:nth-child(3) { background-color: #1E90FF; }
+.colors .color:nth-child(4) { background-color: #2ECC71; }
+.colors .color:nth-child(5) { background-color: #FFA502; }
+.colors .color:nth-child(6) { background-color: #FF6348; }
+.sidenav-types {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+}
+.sidenav-btn {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+.sidenav-btn[data-type="dark"] {
+    background-color: #2C2F33;
+    color: white;
+}
+.sidenav-btn[data-type="transparent"] {
+    background-color: transparent;
+    border: 1px solid #ddd;
+    color: black;
+}
+.sidebar.transparent {
+    background-color: transparent;
+    color: black;
+    border-right: 1px solid transparent;
+}
+.sidebar.transparent ul li {
+    border-bottom: 1px solid transparent;
+}
+.sidebar.transparent a {
+    color: black;
+}
+.sidenav-btn[data-type="white"] {
+    background-color: white;
+    border: 1px solid #ddd;
+}
+.sidebar.white {
+    background-color: #FFFFFF;
+    color: black;
+}
+.sidebar.white ul li {
+    border-bottom: 1px solid #ddd;
+}
+.sidebar.white a {
+    color: black;
+}
+.config-switches {
+    margin-top: 20px;
+}
+.config-switches button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+}
+body.dark-mode {
+    background-color: #2C2F33;
+    color: #FFFFFF;
+}
+body.dark-mode .configurator {
+    background-color: #23272A;
+    color: #FFFFFF;
+}
+body.dark-mode .configurator .config-header {
+    border-bottom: 1px solid #444;
+}
+body.dark-mode .configurator .sidenav-btn[data-type="transparent"] {
+    color: white;
+    border-color: #555;
+}
+body.dark-mode .configurator .sidenav-btn[data-type="white"] {
+    color: black;
+    background-color: #fff;
+}
+body.dark-mode .sidebar ul li {
+    color: white;
+}
+.content {
+    flex-grow: 1;
+    padding: 40px;
+    background-color: #ffffff;
+}

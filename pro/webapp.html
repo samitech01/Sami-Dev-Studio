@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIMS - Techmedology</title>
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            background-color: #ece8e8;
+            font-family: Arial, sans-serif;
+            display: flex;
+            height: 100vh;
+        }
+        .main {
+            padding: 20px 0 0 30px;
+        }
+        .sidebar {
+            width: 250px;
+            height: 600px;
+            border-radius: 20px 0;
+            background-color: #2C2F33;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .sidebar-content {
+            width: 100%;
+        }
+        .sidebar h2 {
+            text-align: center;
+            padding: 20px 0;
+            margin: 0;
+            border-radius: 20px 0;
+            background-color: #23272A;
+            width: 100%;
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .sidebar ul li {
+            padding: 15px 20px;
+            border-bottom: 1px solid #23272A;
+            display: flex;
+            align-items: center;
+        }
+        .sidebar ul li i {
+            margin-right: 10px;
+        }
+        .sidebar ul li:hover {
+            background-color: #424549;
+            cursor: pointer;
+        }
+        .content {
+            flex-grow: 1;
+            padding: 20px;
+        }
+        .content h1 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Techmedology LIMS</h2>
+        <div class="sidebar-content">
+            <ul>
+                <li><i class='bx bxs-dashboard'></i>Dashboard</li>
+                <li><i class='bx bxs-user'></i>User Management</li>
+                <li><i class='bx bxs-flask'></i>Sample Management</li>
+                <li><i class='bx bxs-report'></i>Reports</li>
+                <li><i class='bx bxs-cog'></i>Settings</li>
+            </ul>
+        </div>
+    </div>
+    <div class="main">
+        <div class="content">
+            <h1>Welcome to Techmedology LIMS</h1>
+            <p>This is the main content area where you can add more content for the web application.</p>
+        </div>
+    </div>
+</body>
+</html>
